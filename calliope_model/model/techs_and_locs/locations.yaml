@@ -5,8 +5,8 @@
 nodes:
 
   NLD:
-    latitude: 52.377956 # Amsterdam's coordinates
-    longitude: 4.897070
+    latitude: 40.4167 # Madrid's coordinates
+    longitude: 3.7033
     techs:
 
       ##
@@ -21,9 +21,8 @@ nodes:
       # Fossil-combustion power capacity
       ##
 
-
       ccgt:
-        flow_cap: 19815 # MW. The actual capacity of CCGT in the Netherlands is of 15032 MW   
+        flow_cap: 34158 # MW. The combined capacity of CCGT in the Spain is of 32,659 MW, coal is 1499   
                         # Here, for simplicity, we sum it up to the capacity of coal, oil and other types of gas power plants 
       
       ##
@@ -31,18 +30,19 @@ nodes:
       ##
 
       nuclear:
-        flow_cap: 485 # MW, Borssele
+        flow_cap: 7117 # MW, based on REE/ESIOS data
+
+      hydro:
+        flow_cap: 17077 # MW, based on REE/ESIOS data
 
       ##
       # Variable renewable power capacity
       ##
 
       wind_onshore:
-        flow_cap: 6812 # MW, corrected based on CBS data
-      wind_offshore:
-        flow_cap: 3978 # MW, corrected based on CBS data
+        flow_cap: 33008 # MW, based on REE/ESIOS data
       solar_pv:
-        flow_cap: 24261 # MW, corrected based on CBS data
+        flow_cap: 40945 # MW, based on REE/ESIOS data
 
         
 
