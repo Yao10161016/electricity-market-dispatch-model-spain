@@ -1,0 +1,50 @@
+##
+# Scenarios are optional, named combinations of overrides
+##
+scenarios:
+  more_renewables: ["higher_wind","higher_solar"]
+  generation_outage: ["lower_ccgt"]
+
+##
+# Overrides are the building blocks from which scenarios can be defined
+##
+overrides:
+
+  carbon_tax:
+    data_definitions:
+      objective_cost_weights:
+        data: [1,50] # CO2 is assumed to have a price of 50 kEUR per kton. In this model, we defined monetary costs in kEUR.
+        index: [monetary, co2]
+        dims: costs      
+    techs:
+      ccgt:
+        cost_flow_in:
+          data: [0.00455, 0.0002] # kEUR per MWh, ktonCO2 per MWh
+          index: [monetary, co2]
+          dims: costs
+
+
+  higher_wind:
+    nodes:
+        NLD:
+            techs:
+                wind_onshore:
+                  flow_cap: 10218 # MW
+                wind_offshore:
+                  flow_cap: 5000 # MW
+
+  higher_solar:
+    nodes:
+        NLD:
+            techs:
+                solar_pv:
+                  flow_cap: 35000 # MW
+
+
+  lower_ccgt:
+    nodes:
+        NLD:
+            techs:
+                ccgt:
+                  flow_cap: 6000 # MW
+

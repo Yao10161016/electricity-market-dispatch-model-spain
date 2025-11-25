@@ -1,0 +1,9 @@
+nodes,techs,carriers,carrier_in
+NLD,ccgt,power,False
+NLD,curtailment,power,True
+NLD,demand_power,power,True
+NLD,load_shedding,power,False
+NLD,nuclear,power,False
+NLD,solar_pv,power,False
+NLD,wind_offshore,power,False
+NLD,wind_onshore,power,False

@@ -1,0 +1,6 @@
+nodes,techs,flow_cap
+NLD,ccgt,19815.0
+NLD,nuclear,485.0
+NLD,solar_pv,24261.0
+NLD,wind_offshore,3978.0
+NLD,wind_onshore,6812.0

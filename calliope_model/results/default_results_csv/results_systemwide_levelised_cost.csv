@@ -1,0 +1,6 @@
+techs,costs,carriers,systemwide_levelised_cost
+ccgt,monetary,power,0.007982456140350877
+load_shedding,monetary,power,0.25
+nuclear,monetary,power,0.022375
+solar_pv,monetary,power,1.0600000000000002e-05
+wind_onshore,monetary,power,0.001508

@@ -1,0 +1,6 @@
+techs,costs,cost_flow_cap
+ccgt,monetary,904.7795
+nuclear,monetary,3672.0
+solar_pv,monetary,676.5703
+wind_offshore,monetary,1769.1171
+wind_onshore,monetary,1769.1171

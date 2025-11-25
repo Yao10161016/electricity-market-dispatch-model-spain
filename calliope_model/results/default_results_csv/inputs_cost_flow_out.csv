@@ -1,0 +1,4 @@
+techs,costs,cost_flow_out
+load_shedding,monetary,0.25
+nuclear,monetary,0.00175
+wind_onshore,monetary,0.001508

@@ -1,0 +1,48 @@
+##
+# nodes
+##
+
+nodes:
+
+  NLD:
+    latitude: 52.377956 # Amsterdam's coordinates
+    longitude: 4.897070
+    techs:
+
+      ##
+      # Demand
+      ##
+
+      demand_power: # the input .csv file is in MW
+      curtailment: 
+      load_shedding:
+
+      ##
+      # Fossil-combustion power capacity
+      ##
+
+
+      ccgt:
+        flow_cap: 19815 # MW. The actual capacity of CCGT in the Netherlands is of 15032 MW   
+                        # Here, for simplicity, we sum it up to the capacity of coal, oil and other types of gas power plants 
+      
+      ##
+      # Carbon-neutral firm capacity
+      ##
+
+      nuclear:
+        flow_cap: 485 # MW, Borssele
+
+      ##
+      # Variable renewable power capacity
+      ##
+
+      wind_onshore:
+        flow_cap: 6812 # MW, corrected based on CBS data
+      wind_offshore:
+        flow_cap: 3978 # MW, corrected based on CBS data
+      solar_pv:
+        flow_cap: 24261 # MW, corrected based on CBS data
+
+        
+

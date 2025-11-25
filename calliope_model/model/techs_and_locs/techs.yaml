@@ -1,0 +1,138 @@
+##
+# TECHNOLOGY DEFINITIONS
+##
+
+templates:
+    interest_rate_setter:
+        cost_interest_rate:
+          data: 0.073  # average wind onshore WACC OECD from [@Steffen:2019]
+          index: monetary
+          dims: costs
+
+techs:
+  ##
+  # Firm supply
+  ##
+
+  load_shedding:
+    name: "Shed load due to insufficient generation"
+    color: "#000000"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    lifetime: 50
+    cost_flow_out:
+      data: 0.25 # kEUR per MWh - about 10x more expensive than the most expensive generator
+      index: monetary
+      dims: costs
+
+  ccgt:
+    name: "Combined cycle gas turbine"
+    color: "#E37A72"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.57
+    flow_ramping: 0.8
+    lifetime: 25
+    cost_flow_cap:
+      data: 904.7795  # kEUR per MW
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.00455 # kEUR per MWh
+      index: monetary
+      dims: costs
+
+  nuclear:
+    name: "Nuclear power plant"
+    color: "#F3007A"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.4
+    flow_ramping: 0.5 # assumption: less flexible than CCGT
+    lifetime: 50
+    cost_flow_cap:
+      data: 3672  # kEUR per MW
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.00175 # kEUR per MWh
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.00825 # kEUR per MWh
+      index: monetary
+      dims: costs
+
+  ##
+  # Variable renewable supply
+  ##
+
+  solar_pv:
+    name: "Solar photovoltaic power"
+    color: "#F9D956"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 37 
+    cost_flow_cap:
+      data: 676.5703  # kEUR per MWW
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data:  0.0000106 # kEUR per MWh
+      index: monetary
+      dims: costs
+
+  wind_onshore:
+    name: "Wind power onshore"
+    color: "#56F9C0"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 30 
+    cost_flow_cap:
+      data: 1769.1171 # kEUR per MW
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.001508 # kEUR per MW
+      index: monetary
+      dims: costs
+
+
+  wind_offshore:
+    name: "Wind power offshore"
+    color: "#56CBF9"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 30 
+    cost_flow_cap:
+      data: 1769.1171 # kEUR per MW
+      index: monetary
+      dims: costs
+
+
+  ##
+  # Demand
+  ##
+
+  demand_power:
+    name: "Power demand"
+    color: "#072486"
+    base_tech: demand
+    carrier_in: power
+
+  curtailment:
+    name: "Power curtailment"
+    color: "#000000"
+    base_tech: demand
+    carrier_in: power
+    sink_use_max: 20000 # higher than peak demand
+
