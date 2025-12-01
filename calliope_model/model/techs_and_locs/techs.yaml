@@ -105,20 +105,6 @@ techs:
       dims: costs
 
 
-  wind_offshore:
-    name: "Wind power offshore"
-    color: "#56CBF9"
-    base_tech: supply
-    template: interest_rate_setter
-    carrier_out: power
-    source_unit: per_cap
-    lifetime: 30 
-    cost_flow_cap:
-      data: 1769.1171 # kEUR per MW
-      index: monetary
-      dims: costs
-
-
   ##
   # Demand
   ##

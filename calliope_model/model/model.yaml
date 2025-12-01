@@ -41,17 +41,17 @@ data_definitions:
 
 data_tables:
   demand:
-    data: input_data_tables/demand.csv
+    data: input_data_tables/demand_sept2025.csv
     rows: timesteps
     columns: [nodes,techs]
     add_dims:
       parameters: sink_use_equals
   renewables:
-    data: input_data_tables/renewables.csv
+    data: input_data_tables/renewables_sept2025.csv
     rows: timesteps
     columns: [nodes,techs]
     select:
-      techs: [solar_pv,wind_offshore,wind_onshore]    
+      techs: [solar_pv,wind_onshore]    
     add_dims:
       parameters: source_use_equals  
 
