@@ -9,7 +9,7 @@ config:
     name: NL Power System dispatch example
     # What version of Calliope this model is intended for
     calliope_version: 0.7.0.dev7
-    subset.timesteps: ["2019-01-01", "2019-01-31"] # Subset of timesteps
+    subset.timesteps: ["2024-10-01", "2025-09-30"] # Subset of timesteps
     broadcast_input_data: False
     extra_math: ["operate"]
 #    datetime_format: "%Y-%m-%d %H:%M:%S+00:00"
@@ -41,13 +41,13 @@ data_definitions:
 
 data_tables:
   demand:
-    data: input_data_tables/demand_sept2025.csv
+    data: input_data_tables/demand_year.csv
     rows: timesteps
     columns: [nodes,techs]
     add_dims:
       parameters: sink_use_equals
   renewables:
-    data: input_data_tables/renewables_sept2025.csv
+    data: input_data_tables/renewables_year.csv
     rows: timesteps
     columns: [nodes,techs]
     select:

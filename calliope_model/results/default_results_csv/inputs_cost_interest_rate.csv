@@ -1,7 +1,7 @@
 techs,costs,cost_interest_rate
 ccgt,monetary,0.073
+hydro,monetary,0.073
 load_shedding,monetary,0.073
 nuclear,monetary,0.073
 solar_pv,monetary,0.073
-wind_offshore,monetary,0.073
 wind_onshore,monetary,0.073
