@@ -32,17 +32,21 @@ techs:
     base_tech: supply
     template: interest_rate_setter
     carrier_out: power
-    flow_out_eff: 0.57
+    flow_out_eff: 0.57 #updated from PNEIC MITECO
     flow_ramping: 0.8
-    lifetime: 25
+    lifetime: 15 # updated from AI
     cost_flow_cap:
-      data: 904.7795  # kEUR per MW
+      data: 100  # kEUR per MW, updated from REE
       index: monetary
       dims: costs
     cost_flow_in:
-      data: 0.00455 # kEUR per MWh
+      data: 0.027 # kEUR per MWh, updated from PNEIC MITECO
       index: monetary
       dims: costs
+    cost_flow_out:
+      data: 0.002135 # kEUR per MWh, updated from ERAA
+      index: monetary
+      dims: costs    
 
   nuclear:
     name: "Nuclear power plant"
@@ -50,8 +54,30 @@ techs:
     base_tech: supply
     template: interest_rate_setter
     carrier_out: power
-    flow_out_eff: 0.4
+    flow_out_eff: 0.33 #updated from PNEIC MITECO
     flow_ramping: 0.5 # assumption: less flexible than CCGT
+    lifetime: 50
+    cost_flow_cap:
+      data: 5000 # kEUR per MW, combine pwc report and netherland data, assumption
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0075 # kEUR per MWh, updated from ERAA
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.001692 # kEUR per MWh, updated from PNEIC MITECO
+      index: monetary
+      dims: costs
+
+  hydro:
+    name: "Hydro power plant"
+    color: "#7900f3"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.9 # updated from engie.es 
+    flow_ramping: 0.9 # assumption: more flexible than CCGT
     lifetime: 50
     cost_flow_cap:
       data: 3672  # kEUR per MW
@@ -61,10 +87,7 @@ techs:
       data: 0.00175 # kEUR per MWh
       index: monetary
       dims: costs
-    cost_flow_in:
-      data: 0.00825 # kEUR per MWh
-      index: monetary
-      dims: costs
+
 
   ##
   # Variable renewable supply
@@ -79,11 +102,11 @@ techs:
     source_unit: per_cap
     lifetime: 37 
     cost_flow_cap:
-      data: 676.5703  # kEUR per MWW
+      data: 885  # kEUR per MW, from IEA PVPS 2023
       index: monetary
       dims: costs
     cost_flow_in:
-      data:  0.0000106 # kEUR per MWh
+      data:  0.0000106 # kEUR per MWh, keep assumption
       index: monetary
       dims: costs
 
