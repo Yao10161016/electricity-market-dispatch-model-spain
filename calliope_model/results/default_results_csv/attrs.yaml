@@ -4473,12 +4473,12 @@ runtime:
   calliope_version_initialised: 0.7.0.dev7
   scenario:
   timings:
-    preprocess_start: 1764688800.665375
-    init_complete: 1764688801.346898
-    build_start: 1764688808.098703
-    build_complete: 1764688815.875738
-    solve_start: 1764688819.43053
-    solver_exit: 1764688829.008012
-    postprocess_complete: 1764688829.074738
-    solve_complete: 1764688829.074738
+    preprocess_start: 1764851342.926565
+    init_complete: 1764851343.290219
+    build_start: 1764851343.313069
+    build_complete: 1764851348.043418
+    solve_start: 1764851350.678948
+    solver_exit: 1764851356.364556
+    postprocess_complete: 1764851356.398125
+    solve_complete: 1764851356.398125
   termination_condition: optimal
