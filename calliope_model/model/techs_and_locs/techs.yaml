@@ -36,7 +36,7 @@ techs:
     flow_ramping: 0.8
     lifetime: 15 # updated from AI
     cost_flow_cap:
-      data: 100  # kEUR per MW, updated from REE
+      data: 100  # kEUR per MW, updated from REE ->  very low compared to other techs? why?
       index: monetary
       dims: costs
     cost_flow_in:
@@ -80,11 +80,11 @@ techs:
     flow_ramping: 0.9 # assumption: more flexible than CCGT
     lifetime: 50
     cost_flow_cap:
-      data: 3672  # kEUR per MW
+      data: 4500  # kEUR per MW, updated from A review of small hydropower performance and cost, from median CCAP ≈ 5 MUSD/MW
       index: monetary
       dims: costs
     cost_flow_out:
-      data: 0.00175 # kEUR per MWh
+      data: 0.012 # kEUR per MWh, updated from A review of small hydropower performance and cost, consistent with LCOE ~80 $/MWh
       index: monetary
       dims: costs
 
@@ -119,7 +119,7 @@ techs:
     source_unit: per_cap
     lifetime: 30 
     cost_flow_cap:
-      data: 1769.1171 # kEUR per MW
+      data: 1790 # kEUR per MW, JRC Energy Technology Reference Indicator (ETRI) projections for 2010-2050
       index: monetary
       dims: costs
     cost_flow_out:
