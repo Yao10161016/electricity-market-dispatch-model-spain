@@ -130,11 +130,11 @@ definition:
       flow_ramping: 0.9
       lifetime: 50
       cost_flow_cap:
-        data: 3672
+        data: 4500
         dims: costs
         index: monetary
       cost_flow_out:
-        data: 0.00175
+        data: 0.012
         dims: costs
         index: monetary
     solar_pv:
@@ -170,7 +170,7 @@ definition:
       source_unit: per_cap
       lifetime: 30
       cost_flow_cap:
-        data: 1769.1171
+        data: 1790
         dims: costs
         index: monetary
       cost_flow_out:
@@ -4473,12 +4473,12 @@ runtime:
   calliope_version_initialised: 0.7.0.dev7
   scenario:
   timings:
-    preprocess_start: 1764851342.926565
-    init_complete: 1764851343.290219
-    build_start: 1764851343.313069
-    build_complete: 1764851348.043418
-    solve_start: 1764851350.678948
-    solver_exit: 1764851356.364556
-    postprocess_complete: 1764851356.398125
-    solve_complete: 1764851356.398125
+    preprocess_start: 1764942302.300443
+    init_complete: 1764942303.143911
+    build_start: 1764942303.203759
+    build_complete: 1764942312.14075
+    solve_start: 1764942318.062899
+    solver_exit: 1764942330.507807
+    postprocess_complete: 1764942330.566414
+    solve_complete: 1764942330.566414
   termination_condition: optimal
