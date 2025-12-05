@@ -1,0 +1,4 @@
+techs,costs,cost_flow_in
+ccgt,monetary,0.027
+nuclear,monetary,0.001692
+solar_pv,monetary,1.06e-05

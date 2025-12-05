@@ -1,0 +1,9 @@
+techs,name
+ccgt,Combined cycle gas turbine
+curtailment,Power curtailment
+demand_power,Power demand
+hydro,Hydro power plant
+load_shedding,Shed load due to insufficient generation
+nuclear,Nuclear power plant
+solar_pv,Solar photovoltaic power
+wind_onshore,Wind power onshore
