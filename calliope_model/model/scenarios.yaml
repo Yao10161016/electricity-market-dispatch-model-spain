@@ -2,8 +2,11 @@
 # Scenarios are optional, named combinations of overrides
 ##
 scenarios:
+  less_nuclear: ["lower_nuclear"]
   more_renewables: ["higher_wind","higher_solar"]
-  generation_outage: ["lower_ccgt"]
+  combination: ["higher_wind","higher_solar","lower_nuclear"]
+  #generation_outage: ["lower_ccgt"]
+  
 
 ##
 # Overrides are the building blocks from which scenarios can be defined
@@ -23,23 +26,31 @@ overrides:
           index: [monetary, co2]
           dims: costs
 
+#spain 2030 RES mix -> 81% of total expected 2030 electricity demand
+# projections for 2030 (PNEIC): wind 62 GW, Solar 76 GW
 
   higher_wind:
     nodes:
         NLD:
             techs:
                 wind_onshore:
-                  flow_cap: 10218 # MW
-                wind_offshore:
-                  flow_cap: 5000 # MW
+                  flow_cap: 62000 # MW
+               # wind_offshore:
+                #  flow_cap: 6200 # MW
 
   higher_solar:
     nodes:
         NLD:
             techs:
                 solar_pv:
-                  flow_cap: 35000 # MW
+                  flow_cap: 76000 # MW
 
+  lower_nuclear:
+    nodes:
+        NLD:
+            techs:
+                nuclear:
+                  flow_cap: 3500    # MW
 
   lower_ccgt:
     nodes:
