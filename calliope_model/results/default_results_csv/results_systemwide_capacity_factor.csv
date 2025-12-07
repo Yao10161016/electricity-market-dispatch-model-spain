@@ -1,9 +1,9 @@
 techs,carriers,systemwide_capacity_factor
-ccgt,power,0.007807092891089572
+ccgt,power,0.011275066255984217
 curtailment,power,0.0
 demand_power,power,0.0
-hydro,power,0.7425121117657795
+hydro,power,0.7296415285483622
 load_shedding,power,0.0
-nuclear,power,0.2216890479337477
-solar_pv,power,0.14814406160635074
-wind_onshore,power,0.19400373031233334
+nuclear,power,0.27984881279760304
+solar_pv,power,0.14814406163383595
+wind_onshore,power,0.194003730312577

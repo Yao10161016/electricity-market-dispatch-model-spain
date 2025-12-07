@@ -43,7 +43,7 @@ definition:
         ccgt:
           flow_cap: 34158
         nuclear:
-          flow_cap: 7117
+          flow_cap: 6000
         hydro:
           flow_cap: 17077
         wind_onshore:
@@ -55,7 +55,7 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Shed load due to insufficient generation
@@ -70,7 +70,7 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Combined cycle gas turbine
@@ -78,7 +78,7 @@ definition:
       carrier_out: power
       flow_out_eff: 0.57
       flow_ramping: 0.8
-      lifetime: 15
+      lifetime: 30
       cost_flow_cap:
         data: 100
         dims: costs
@@ -95,15 +95,15 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Nuclear power plant
       color: '#F3007A'
       carrier_out: power
       flow_out_eff: 0.33
-      flow_ramping: 0.5
-      lifetime: 50
+      flow_ramping: 0.3
+      lifetime: 40
       cost_flow_cap:
         data: 5000
         dims: costs
@@ -120,15 +120,15 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Hydro power plant
       color: '#7900f3'
       carrier_out: power
       flow_out_eff: 0.9
-      flow_ramping: 0.9
-      lifetime: 50
+      flow_ramping: 1.0
+      lifetime: 60
       cost_flow_cap:
         data: 4500
         dims: costs
@@ -141,14 +141,14 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Solar photovoltaic power
       color: '#F9D956'
       carrier_out: power
       source_unit: per_cap
-      lifetime: 37
+      lifetime: 25
       cost_flow_cap:
         data: 885
         dims: costs
@@ -161,14 +161,14 @@ definition:
       active: true
       base_tech: supply
       cost_interest_rate:
-        data: 0.073
+        data: 0.07
         dims: costs
         index: monetary
       name: Wind power onshore
       color: '#56F9C0'
       carrier_out: power
       source_unit: per_cap
-      lifetime: 30
+      lifetime: 25
       cost_flow_cap:
         data: 1790
         dims: costs
@@ -189,7 +189,7 @@ definition:
       name: Power curtailment
       color: '#000000'
       carrier_in: power
-      sink_use_max: 20000
+      sink_use_max: 40000
 config:
   init:
     name: NL Power System dispatch example
@@ -4473,12 +4473,12 @@ runtime:
   calliope_version_initialised: 0.7.0.dev7
   scenario:
   timings:
-    preprocess_start: 1764954321.401583
-    init_complete: 1764954321.772316
-    build_start: 1764954321.805526
-    build_complete: 1764954326.209537
-    solve_start: 1764954328.659905
-    solver_exit: 1764954334.531215
-    postprocess_complete: 1764954334.566343
-    solve_complete: 1764954334.566343
+    preprocess_start: 1765151089.463416
+    init_complete: 1765151089.886597
+    build_start: 1765151101.503199
+    build_complete: 1765151106.411371
+    solve_start: 1765151109.12349
+    solver_exit: 1765151115.237992
+    postprocess_complete: 1765151115.278133
+    solve_complete: 1765151115.278133
   termination_condition: optimal

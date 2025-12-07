@@ -35,6 +35,7 @@ techs:
     carrier_out: power
     flow_out_eff: 0.57 #updated from PNEIC MITECO
     flow_ramping: 0.8
+                # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
     lifetime: 30 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
                 # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
@@ -57,7 +58,8 @@ techs:
     template: interest_rate_setter
     carrier_out: power
     flow_out_eff: 0.33 #updated from PNEIC MITECO
-    flow_ramping: 0.5 # assumption: less flexible than CCGT
+    flow_ramping: 0.3 # less flexible than CCGT, 
+                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
     lifetime: 40 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
                 # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
@@ -80,7 +82,8 @@ techs:
     template: interest_rate_setter
     carrier_out: power
     flow_out_eff: 0.9 # updated from engie.es 
-    flow_ramping: 0.9 # assumption: more flexible than CCGT
+    flow_ramping: 1.0 # assumption: more flexible than CCGT
+                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
     lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
                 # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:

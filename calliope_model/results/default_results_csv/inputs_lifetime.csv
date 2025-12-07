@@ -1,7 +1,7 @@
 techs,lifetime
-ccgt,15.0
-hydro,50.0
+ccgt,30.0
+hydro,60.0
 load_shedding,50.0
-nuclear,50.0
-solar_pv,37.0
-wind_onshore,30.0
+nuclear,40.0
+solar_pv,25.0
+wind_onshore,25.0
