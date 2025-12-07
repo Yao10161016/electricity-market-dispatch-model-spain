@@ -30,7 +30,8 @@ nodes:
       ##
 
       nuclear:
-        flow_cap: 7117 # MW, based on REE/ESIOS data
+        flow_cap: 6000 # according to new data from Celia
+        #7117 # MW, based on REE/ESIOS data
 
       hydro:
         flow_cap: 17077 # MW, based on REE/ESIOS data

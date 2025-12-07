@@ -50,7 +50,7 @@ overrides:
         NLD:
             techs:
                 nuclear:
-                  flow_cap: 3500    # MW
+                  flow_cap: 4000    # MW
 
   lower_ccgt:
     nodes:
