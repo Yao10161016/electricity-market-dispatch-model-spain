@@ -5,7 +5,8 @@
 templates:
     interest_rate_setter:
         cost_interest_rate:
-          data: 0.073  # average wind onshore WACC OECD from [@Steffen:2019]
+          data: 0.07  # average WACC, IEA 'Projected Costs of Generating Electricity' 
+          # https://www.iea.org/reports/projected-costs-of-generating-electricity-2020
           index: monetary
           dims: costs
 
@@ -34,7 +35,8 @@ techs:
     carrier_out: power
     flow_out_eff: 0.57 #updated from PNEIC MITECO
     flow_ramping: 0.8
-    lifetime: 15 # updated from AI
+    lifetime: 30 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
       data: 100  # kEUR per MW, updated from REE ->  very low compared to other techs? why?
       index: monetary
@@ -56,7 +58,8 @@ techs:
     carrier_out: power
     flow_out_eff: 0.33 #updated from PNEIC MITECO
     flow_ramping: 0.5 # assumption: less flexible than CCGT
-    lifetime: 50
+    lifetime: 40 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
       data: 5000 # kEUR per MW, combine pwc report and netherland data, assumption
       index: monetary
@@ -78,7 +81,8 @@ techs:
     carrier_out: power
     flow_out_eff: 0.9 # updated from engie.es 
     flow_ramping: 0.9 # assumption: more flexible than CCGT
-    lifetime: 50
+    lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
       data: 4500  # kEUR per MW, updated from A review of small hydropower performance and cost, from median CCAP ≈ 5 MUSD/MW
       index: monetary
@@ -100,7 +104,8 @@ techs:
     template: interest_rate_setter
     carrier_out: power
     source_unit: per_cap
-    lifetime: 37 
+    lifetime: 25 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496  
     cost_flow_cap:
       data: 885  # kEUR per MW, from IEA PVPS 2023
       index: monetary
@@ -117,7 +122,8 @@ techs:
     template: interest_rate_setter
     carrier_out: power
     source_unit: per_cap
-    lifetime: 30 
+    lifetime: 25 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
     cost_flow_cap:
       data: 1790 # kEUR per MW, JRC Energy Technology Reference Indicator (ETRI) projections for 2010-2050
       index: monetary
@@ -143,5 +149,5 @@ techs:
     color: "#000000"
     base_tech: demand
     carrier_in: power
-    sink_use_max: 20000 # higher than peak demand
+    sink_use_max: 40000 # higher than peak demand (39791.916667MW)
 
