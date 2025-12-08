@@ -2,6 +2,7 @@
 # Scenarios are optional, named combinations of overrides
 ##
 scenarios:
+  base: [] # The "base" scenario uses no overrides
   less_nuclear: ["lower_nuclear"]
   more_renewables: ["higher_wind","higher_solar"]
   combination: ["higher_wind","higher_solar","lower_nuclear"]

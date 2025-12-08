@@ -1,0 +1,7 @@
+techs,costs,cost_om_annual_investment_fraction
+ccgt,monetary,8.5
+hydro,monetary,1.0
+nuclear,monetary,2.1
+solar_pv,monetary,2.5
+wind_offshore,monetary,3.1
+wind_onshore,monetary,2.3
