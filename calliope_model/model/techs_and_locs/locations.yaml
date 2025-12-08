@@ -44,6 +44,8 @@ nodes:
         flow_cap: 33008 # MW, based on REE/ESIOS data
       solar_pv:
         flow_cap: 40945 # MW, based on REE/ESIOS data
+      wind_offshore:
+        flow_cap: 0 # MW, based on REE/ESIOS data
 
         
 
