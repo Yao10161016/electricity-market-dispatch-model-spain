@@ -6,4 +6,5 @@ NLD,hydro,power,False
 NLD,load_shedding,power,False
 NLD,nuclear,power,False
 NLD,solar_pv,power,False
+NLD,wind_offshore,power,False
 NLD,wind_onshore,power,False

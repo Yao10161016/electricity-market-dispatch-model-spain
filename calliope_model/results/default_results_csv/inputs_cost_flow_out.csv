@@ -3,4 +3,5 @@ ccgt,monetary,0.002135
 hydro,monetary,0.012
 load_shedding,monetary,0.25
 nuclear,monetary,0.0075
+wind_offshore,monetary,0.0212
 wind_onshore,monetary,0.001508

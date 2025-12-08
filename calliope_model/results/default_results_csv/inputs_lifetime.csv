@@ -4,4 +4,5 @@ hydro,60.0
 load_shedding,50.0
 nuclear,40.0
 solar_pv,25.0
+wind_offshore,25.0
 wind_onshore,25.0

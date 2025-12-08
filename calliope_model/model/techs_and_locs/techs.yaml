@@ -113,8 +113,9 @@ techs:
       data: 885  # kEUR per MW, from IEA PVPS 2023
       index: monetary
       dims: costs
-    cost_flow_in:
-      data:  0.0000106 # kEUR per MWh, keep assumption
+    cost_flow_out:
+      data:  0.0000106 # kEUR per MW, keep assumption
+            # https://github.com/PyPSA/technology-data/blob/master/outputs/costs_2025.csv
       index: monetary
       dims: costs
 

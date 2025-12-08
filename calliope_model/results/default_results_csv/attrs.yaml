@@ -50,6 +50,8 @@ definition:
           flow_cap: 33008
         solar_pv:
           flow_cap: 40945
+        wind_offshore:
+          flow_cap: 0
   techs:
     load_shedding:
       active: true
@@ -175,6 +177,26 @@ definition:
         index: monetary
       cost_flow_out:
         data: 0.001508
+        dims: costs
+        index: monetary
+    wind_offshore:
+      active: true
+      base_tech: supply
+      cost_interest_rate:
+        data: 0.07
+        dims: costs
+        index: monetary
+      name: Wind power offshore
+      color: '#56CBF9'
+      carrier_out: power
+      source_unit: per_cap
+      lifetime: 25
+      cost_flow_cap:
+        data: 2730
+        dims: costs
+        index: monetary
+      cost_flow_out:
+        data: 0.0212
         dims: costs
         index: monetary
     demand_power:
@@ -4473,12 +4495,12 @@ runtime:
   calliope_version_initialised: 0.7.0.dev7
   scenario:
   timings:
-    preprocess_start: 1765151089.463416
-    init_complete: 1765151089.886597
-    build_start: 1765151101.503199
-    build_complete: 1765151106.411371
-    solve_start: 1765151109.12349
-    solver_exit: 1765151115.237992
-    postprocess_complete: 1765151115.278133
-    solve_complete: 1765151115.278133
+    preprocess_start: 1765203754.681038
+    init_complete: 1765203755.333101
+    build_start: 1765203759.320251
+    build_complete: 1765203769.106561
+    solve_start: 1765203773.663081
+    solver_exit: 1765203784.745023
+    postprocess_complete: 1765203784.81718
+    solve_complete: 1765203784.822191
   termination_condition: optimal

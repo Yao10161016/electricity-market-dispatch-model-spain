@@ -6,4 +6,5 @@ hydro,Hydro power plant
 load_shedding,Shed load due to insufficient generation
 nuclear,Nuclear power plant
 solar_pv,Solar photovoltaic power
+wind_offshore,Wind power offshore
 wind_onshore,Wind power onshore
