@@ -4,7 +4,7 @@ curtailment,power,0.0
 demand_power,power,0.0
 hydro,power,0.7296415285483622
 load_shedding,power,0.0
-nuclear,power,0.27984881279760304
+nuclear,power,0.2798488127976031
 solar_pv,power,0.14814406163383595
 wind_offshore,power,0.0
 wind_onshore,power,0.194003730312577

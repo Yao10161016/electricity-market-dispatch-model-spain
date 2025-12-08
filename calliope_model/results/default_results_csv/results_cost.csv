@@ -1,8 +1,8 @@
 nodes,techs,costs,cost
 NLD,ccgt,monetary,167013.22255488104
 NLD,hydro,monetary,1309804.4908231024
-NLD,load_shedding,monetary,0.0019912610111088615
-NLD,nuclear,monetary,185732.70592083418
+NLD,load_shedding,monetary,0.001991261010824071
+NLD,nuclear,monetary,185732.70592083424
 NLD,solar_pv,monetary,563.2420808956414
 NLD,wind_offshore,monetary,0.0
 NLD,wind_onshore,monetary,84593.06076339155

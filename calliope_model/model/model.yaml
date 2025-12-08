@@ -1,5 +1,5 @@
 import: # Import other files from paths relative to this file, or absolute paths
-  - "techs_and_locs/techs.yaml" # This file specifies the model's technologies
+  - "techs_and_locs/techs2.yaml" # This file specifies the model's technologies
   - "techs_and_locs/locations.yaml" # This file specifies the model's nodes
   - "scenarios.yaml" # Scenario and override group definitions
 

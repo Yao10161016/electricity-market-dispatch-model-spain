@@ -1,0 +1,199 @@
+##
+# TECHNOLOGY DEFINITIONS
+##
+
+templates:
+    interest_rate_setter:
+        cost_interest_rate:
+          data: 0.07  # average WACC, IEA 'Projected Costs of Generating Electricity' 
+          # https://www.iea.org/reports/projected-costs-of-generating-electricity-2020
+          index: monetary
+          dims: costs
+
+techs:
+  ##
+  # Firm supply
+  ##
+
+  load_shedding:
+    name: "Shed load due to insufficient generation"
+    color: "#000000"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    lifetime: 50
+    cost_flow_out:
+      data: 0.25 # kEUR per MWh - about 10x more expensive than the most expensive generator
+      index: monetary
+      dims: costs
+
+  ccgt:
+    name: "Combined cycle gas turbine"
+    color: "#E37A72"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.57 #updated from PNEIC MITECO
+    flow_ramping: 0.8
+                # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
+    lifetime: 30 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 880  # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.027 # kEUR per MWh, updated from PNEIC MITECO
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0024 # kEUR per MWh, ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+      index: monetary
+      dims: costs    
+    cost_om_annual_investment_fraction:
+      data: 8.5 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  nuclear:
+    name: "Nuclear power plant"
+    color: "#F3007A"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.33 #updated from PNEIC MITECO
+    flow_ramping: 0.3 # less flexible than CCGT, 
+                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
+    lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 4500 # kEUR per MW, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_flow_in:
+      data: 0.001692 # kEUR per MWh, updated from PNEIC MITECO
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0025 # kEUR per MWh, ETRI 2014
+      index: monetary
+      dims: costs        
+    cost_om_annual_investment_fraction:
+      data: 2.1 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  hydro:
+    name: "Hydro power plant"
+    color: "#7900f3"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    flow_out_eff: 0.9 # updated from engie.es 
+    flow_ramping: 1.0 # assumption: more flexible than CCGT
+                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
+    lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 2500  # kEUR per MW, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.03 # kEUR per MWh, VOM, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 1 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  ##
+  # Variable renewable supply
+  ##
+
+  solar_pv:
+    name: "Solar photovoltaic power"
+    color: "#F9D956"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 25 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496  
+    cost_flow_cap:
+      data: 850  # kEUR per MW, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data:  0.0000106 # kEUR per MW, keep assumption
+            # https://github.com/PyPSA/technology-data/blob/master/outputs/costs_2025.csv
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 2.5 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  wind_onshore:
+    name: "Wind power onshore"
+    color: "#56F9C0"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 25 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 1350 # kEUR per MW, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.001508 # kEUR per MW, Danish Energy Agency
+            # https://github.com/PyPSA/technology-data/blob/master/outputs/costs_2025.csv
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 2.3 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  wind_offshore:
+    name: "Wind power offshore"
+    color: "#56CBF9"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    lifetime: 25 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 2730 # kEUR per MW, JRC Energy Technology Reference Indicator (ETRI) projections for 2010-2050
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.0212 # kEUR per MW 	
+            # https://github.com/PyPSA/technology-data/blob/master/outputs/costs_2025.csv
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 3.1 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  ##
+  # Demand
+  ##
+
+  demand_power:
+    name: "Power demand"
+    color: "#072486"
+    base_tech: demand
+    carrier_in: power
+
+  curtailment:
+    name: "Power curtailment"
+    color: "#000000"
+    base_tech: demand
+    carrier_in: power
+    sink_use_max: 40000 # higher than peak demand (39791.916667MW)
+

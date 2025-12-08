@@ -155,7 +155,7 @@ definition:
         data: 885
         dims: costs
         index: monetary
-      cost_flow_in:
+      cost_flow_out:
         data: 1.06e-05
         dims: costs
         index: monetary
@@ -4495,12 +4495,12 @@ runtime:
   calliope_version_initialised: 0.7.0.dev7
   scenario:
   timings:
-    preprocess_start: 1765203754.681038
-    init_complete: 1765203755.333101
-    build_start: 1765203759.320251
-    build_complete: 1765203769.106561
-    solve_start: 1765203773.663081
-    solver_exit: 1765203784.745023
-    postprocess_complete: 1765203784.81718
-    solve_complete: 1765203784.822191
+    preprocess_start: 1765222407.033824
+    init_complete: 1765222407.408356
+    build_start: 1765222422.504215
+    build_complete: 1765222428.122841
+    solve_start: 1765222431.007423
+    solver_exit: 1765222438.096472
+    postprocess_complete: 1765222438.136925
+    solve_complete: 1765222438.136925
   termination_condition: optimal
