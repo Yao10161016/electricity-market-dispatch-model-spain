@@ -35,16 +35,16 @@ overrides:
         NLD:
             techs:
                 wind_onshore:
-                  flow_cap: 62000 # MW
-               # wind_offshore:
-                #  flow_cap: 6200 # MW
+                  flow_cap: 57737 # MW, from NECP
+                wind_offshore:
+                  flow_cap: 2800 # MW
 
   higher_solar:
     nodes:
         NLD:
             techs:
                 solar_pv:
-                  flow_cap: 76000 # MW
+                  flow_cap: 72000 # MW
 
   lower_nuclear:
     nodes:
