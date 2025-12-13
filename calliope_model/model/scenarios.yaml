@@ -6,14 +6,12 @@ scenarios:
   less_nuclear: ["lower_nuclear"]
   more_renewables: ["higher_wind","higher_solar"]
   combination: ["higher_wind","higher_solar","lower_nuclear"]
-  #generation_outage: ["lower_ccgt"]
   
 
 ##
 # Overrides are the building blocks from which scenarios can be defined
 ##
 overrides:
-
   carbon_tax:
     data_definitions:
       objective_cost_weights:
@@ -26,7 +24,7 @@ overrides:
           data: [0.00455, 0.0002] # kEUR per MWh, ktonCO2 per MWh
           index: [monetary, co2]
           dims: costs
-
+          
 #spain 2030 RES mix -> 81% of total expected 2030 electricity demand
 # projections for 2030 (PNEIC): wind 62 GW, Solar 76 GW
 

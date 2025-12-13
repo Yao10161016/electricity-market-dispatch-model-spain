@@ -83,29 +83,7 @@ techs:
       index: monetary
       dims: costs
 
-  hydro:
-    name: "Hydro power plant"
-    color: "#7900f3"
-    base_tech: supply
-    template: interest_rate_setter
-    carrier_out: power
-    flow_out_eff: 0.9 # updated from engie.es 
-    flow_ramping: 1.0 # assumption: more flexible than CCGT
-                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
-    lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
-                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
-    cost_flow_cap:
-      data: 2500  # kEUR per MW, ETRI 2014
-      index: monetary
-      dims: costs
-    cost_flow_out:
-      data: 0.03 # kEUR per MWh, VOM, ETRI 2014
-      index: monetary
-      dims: costs
-    cost_om_annual_investment_fraction:
-      data: 1 # Fractional annual O&M costsfraction, FOM, ETRI 2014
-      index: monetary
-      dims: costs
+
 
   ##
   # Variable renewable supply
@@ -154,6 +132,31 @@ techs:
       dims: costs
     cost_om_annual_investment_fraction:
       data: 2.3 # Fractional annual O&M costsfraction, FOM, ETRI 2014
+      index: monetary
+      dims: costs
+
+  hydro:
+    name: "Hydro power plant"
+    color: "#7900f3"
+    base_tech: supply
+    template: interest_rate_setter
+    carrier_out: power
+    source_unit: per_cap
+    #flow_out_eff: 0.9 # updated from engie.es 
+    #flow_ramping: 1.0 # assumption: more flexible than CCGT
+                  # https://www.oecd.org/content/dam/oecd/en/publications/reports/2018/05/status-of-power-system-transformation-2018_g1g90407/9789264302006-en.pdf
+    lifetime: 60 # ETRI 2014 - Energy Technology Reference Indicator projections for 2010-2050
+                # https://publications.jrc.ec.europa.eu/repository/handle/JRC92496 
+    cost_flow_cap:
+      data: 2500 # kEUR per MW, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_flow_out:
+      data: 0.03 # kEUR per MWh, VOM, ETRI 2014
+      index: monetary
+      dims: costs
+    cost_om_annual_investment_fraction:
+      data: 1 # Fractional annual O&M costsfraction, FOM, ETRI 2014
       index: monetary
       dims: costs
 

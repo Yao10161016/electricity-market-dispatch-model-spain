@@ -1,0 +1,10 @@
+techs,color
+ccgt,#E37A72
+curtailment,#000000
+demand_power,#072486
+hydro,#7900f3
+load_shedding,#000000
+nuclear,#F3007A
+solar_pv,#F9D956
+wind_offshore,#56CBF9
+wind_onshore,#56F9C0
