@@ -51,7 +51,7 @@ data_tables:
     rows: timesteps
     columns: [nodes,techs]
     select:
-      techs: [solar_pv,wind_onshore,hydro]    
+      techs: [solar_pv,wind_onshore,wind_offshore,hydro]    
     add_dims:
       parameters: source_use_equals  
 

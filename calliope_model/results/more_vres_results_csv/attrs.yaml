@@ -27,6 +27,7 @@ definition:
         techs:
         - solar_pv
         - wind_onshore
+        - wind_offshore
         - hydro
       drop:
       add_dims:
@@ -42,17 +43,17 @@ definition:
         curtailment:
         load_shedding:
         ccgt:
-          flow_cap: 34158
+          flow_cap: 18522
         nuclear:
           flow_cap: 7117
         hydro:
-          flow_cap: 17077
+          flow_cap: 9261
         wind_onshore:
-          flow_cap: 57737
+          flow_cap: 37045
         solar_pv:
-          flow_cap: 72000
+          flow_cap: 46306
         wind_offshore:
-          flow_cap: 2800
+          flow_cap: 1323
   techs:
     load_shedding:
       active: true
@@ -186,17 +187,19 @@ definition:
       color: '#7900f3'
       carrier_out: power
       source_unit: per_cap
+      flow_out_eff: 0.9
+      flow_ramping: 0.99
       lifetime: 60
       cost_flow_cap:
         data: 2500
         dims: costs
         index: monetary
       cost_flow_out:
-        data: 0.03
+        data: 0.003
         dims: costs
         index: monetary
       cost_om_annual_investment_fraction:
-        data: 1
+        data: 2
         dims: costs
         index: monetary
     wind_offshore:
@@ -216,7 +219,7 @@ definition:
         dims: costs
         index: monetary
       cost_flow_out:
-        data: 0.0212
+        data: 2.12e-05
         dims: costs
         index: monetary
       cost_om_annual_investment_fraction:
@@ -4515,16 +4518,16 @@ math:
         errors: raise
         active: true
 runtime:
-  applied_overrides: higher_solar;higher_wind
+  applied_overrides: higher_renewables
   calliope_version_initialised: 0.7.0.dev7
   scenario: more_renewables
   timings:
-    preprocess_start: 1765562260.205057
-    init_complete: 1765562260.568714
-    build_start: 1765562265.113183
-    build_complete: 1765562270.53756
-    solve_start: 1765562272.96365
-    solver_exit: 1765562276.583287
-    postprocess_complete: 1765562276.593411
-    solve_complete: 1765562276.594413
-  termination_condition: infeasible
+    preprocess_start: 1765644212.585826
+    init_complete: 1765644213.287773
+    build_start: 1765644217.386381
+    build_complete: 1765644227.031277
+    solve_start: 1765644232.449844
+    solver_exit: 1765644246.289959
+    postprocess_complete: 1765644246.371214
+    solve_complete: 1765644246.371214
+  termination_condition: optimal

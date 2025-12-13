@@ -4,8 +4,10 @@
 scenarios:
   base: [] # The "base" scenario uses no overrides
   less_nuclear: ["lower_nuclear"]
-  more_renewables: ["higher_wind","higher_solar"]
-  combination: ["higher_wind","higher_solar","lower_nuclear"]
+  #more_renewables: ["higher_wind","higher_solar"]
+  more_renewables: ["higher_renewables"]
+  #combination: ["higher_wind","higher_solar","lower_nuclear"]
+  combination: ["higher_renewables","lower_nuclear"]
   
 
 ##
@@ -24,7 +26,7 @@ overrides:
           data: [0.00455, 0.0002] # kEUR per MWh, ktonCO2 per MWh
           index: [monetary, co2]
           dims: costs
-          
+
 #spain 2030 RES mix -> 81% of total expected 2030 electricity demand
 # projections for 2030 (PNEIC): wind 62 GW, Solar 76 GW
 
@@ -58,3 +60,19 @@ overrides:
                 ccgt:
                   flow_cap: 6000 # MW
 
+  higher_renewables:
+    nodes:
+        NLD:
+            techs:
+                wind_onshore:
+                  flow_cap: 37045 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 28%
+                  # current total installed capacity is 132305 MW
+                wind_offshore:
+                  flow_cap: 1323 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 1%
+                solar_pv:
+                  flow_cap: 46306 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 35%
+                ccgt:
+                  flow_cap: 18522 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 14%
+                hydro:
+                  flow_cap: 9261  # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 7%
+                
