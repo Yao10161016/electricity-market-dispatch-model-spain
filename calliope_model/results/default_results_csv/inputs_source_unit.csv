@@ -1,0 +1,5 @@
+techs,source_unit
+hydro,per_cap
+solar_pv,per_cap
+wind_offshore,per_cap
+wind_onshore,per_cap
