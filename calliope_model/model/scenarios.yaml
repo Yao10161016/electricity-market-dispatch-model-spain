@@ -73,6 +73,6 @@ overrides:
                   flow_cap: 46306 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 35%
                 ccgt:
                   flow_cap: 18522 # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 14%
-                hydro:
-                  flow_cap: 9261  # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 7%
+                #hydro:
+                  #flow_cap: 9261  # MW, from NECP, Results PNIEC 2023-2030 H2030 scenario, 7%, 9261
                 
