@@ -28,37 +28,7 @@ overrides:
           dims: costs
 
 #spain 2030 RES mix -> 81% of total expected 2030 electricity demand
-# projections for 2030 (PNEIC): wind 62 GW, Solar 76 GW
-
-  higher_wind:
-    nodes:
-        NLD:
-            techs:
-                wind_onshore:
-                  flow_cap: 57737 # MW, from NECP
-                wind_offshore:
-                  flow_cap: 2800 # MW
-
-  higher_solar:
-    nodes:
-        NLD:
-            techs:
-                solar_pv:
-                  flow_cap: 72000 # MW
-
-  lower_nuclear:
-    nodes:
-        NLD:
-            techs:
-                nuclear:
-                  flow_cap: 4000    # MW
-
-  lower_ccgt:
-    nodes:
-        NLD:
-            techs:
-                ccgt:
-                  flow_cap: 6000 # MW
+# projections for 2030 (PNEIC)
 
   higher_renewables:
     nodes:
